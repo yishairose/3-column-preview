@@ -1,15 +1,151 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    margin: 0 50px;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -19,21 +155,39 @@ body {
 .container {
     display: flex;
     margin: auto;
-    height: 60vh;
+    height: 75vh;
     width: 75%;
+
 }
+
 
 .container section {
 
     padding: 20px 30px;
     color: hsla(0, 0%, 100%, 0.75);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-evenly;
 
 }
 
+
+
+.container section img {
+
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.container section h1 {
+
+    margin-bottom: 50px;
+}
+
+
+.container section a {
+
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
 
 
 h1 {
@@ -85,6 +239,7 @@ h1 {
     background-color: hsl(0, 0%, 95%);
     padding: 10px 35px;
     border-radius: 25px;
+    transition: all 0.3s;
 
 }
 
@@ -94,4 +249,38 @@ h1 {
     border: 1px solid hsl(0, 0%, 95%);
     background-color: transparent;
     color: hsl(0, 0%, 95%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    width: auto;
+    padding-bottom: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 900px) {
+
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sedans {
+
+        border-radius: 10px 10px 0 0;
+
+    }
+
+    .luxury {
+
+        border-radius: 0 0 10px 10px;
+
+    }
+
 }
