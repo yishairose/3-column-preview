@@ -143,9 +143,10 @@ table {
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -153,11 +154,11 @@ body {
 }
 
 .container {
+    width: 100%;
+    max-width: 700px;
     display: flex;
-    margin: auto;
-    height: 75vh;
-    width: 75%;
-
+    flex-direction: column;
+    text-align: center;
 }
 
 
@@ -201,7 +202,7 @@ h1 {
 .sedans {
 
     background-color: hsl(31, 77%, 52%);
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px 10px 0 0;
 
 }
 
@@ -223,7 +224,8 @@ h1 {
 
 .luxury {
     background-color: hsl(179, 100%, 13%);
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 0 10px 10px;
+
 
 }
 
@@ -254,9 +256,7 @@ h1 {
 .attribution {
     font-size: 11px;
     text-align: center;
-    position: relative;
-    width: auto;
-    padding-bottom: 10px;
+    margin-top: auto;
 }
 
 .attribution a {
@@ -264,22 +264,22 @@ h1 {
 }
 
 
-@media (max-width: 900px) {
+@media (min-width: 700px) {
 
 
     .container {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .sedans {
 
-        border-radius: 10px 10px 0 0;
+        border-radius: 10px 0 0 10px;
 
     }
 
     .luxury {
+        border-radius: 0 10px 10px 0;
 
-        border-radius: 0 0 10px 10px;
 
     }
 
